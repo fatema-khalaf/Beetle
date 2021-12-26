@@ -150,15 +150,12 @@
   width: 3rem;
   fill: rgb(236, 230, 230);
   position: absolute;
-  right: 3rem;
   top: 3rem;
-}
-.icon-menu-right {
-  position: absolute;
-  left: 3rem;
-  top: 3rem;
-  height: 3rem;
-  width: 3rem;
-  fill: rgb(255, 255, 255);
-  transform: rotateY(180deg);
+  &-right {
+    left: 3rem;
+    transform: rotateY(180deg);
+  }
+  &-left {
+    right: 3rem;
+  }
 }

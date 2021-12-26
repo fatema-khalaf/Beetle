@@ -7,12 +7,12 @@ $color-secondary-light: #006027;
 $color-secondary: #006027;
 $color-secondary-dark: #0f3108;
 
-// --g-green: #0fa573;
-// --g-pine: #0a6955;
-// --g-olive: #364a4c;
-// --g-blue: #0074e8;
-// --g-navy: #004b91;
-// --g-midnight: #133a5e;
+$color-green: #0fa573;
+$color-pine: #0a6955;
+$color-olive: #364a4c;
+$color-navy: #004b91;
+$color-blue: #0074e8;
+$color-midnight: #133a5e;
 
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
@@ -24,6 +24,14 @@ $color-grey-dark-2: #6d5d4b;
 $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 $font-primary-header: "Bebas Neue", "cursive", sans-serif;
+
+// Responsive breakpoints
+$bp-largest: 75em; //1200px/16px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-sm-medium: 43.75em; //700px
+$bp-small: 37.5em; //600px
+
 *,
 *::before,
 *::after {
@@ -32,13 +40,10 @@ $font-primary-header: "Bebas Neue", "cursive", sans-serif;
 }
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
-.container {
-  height: 100vh;
-  background-color: lawngreen;
-  //   display: grid;
-  //   grid-template-columns: 1fr 1fr;
-  display: flex;
-  overflow: hidden;
+body {
+  box-sizing: border-box;
 }

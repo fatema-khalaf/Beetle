@@ -1,30 +1,31 @@
 .left {
   flex: 0 0 50%;
   height: 100vh;
-  //  grid-column: 1;
   background-image: radial-gradient(
     circle at 100%,
-    $color-primary-light,
-    $color-primary 30%,
-    $color-primary-dark 50%
+    #5213c9 10%,
+    #0c0d55 60%,
+    #000c3d 100%
   );
-  // display: grid;
-  // grid-template-columns: repeat(2, 1fr);
-  // grid-template-rows: repeat(3, 1fr);
   transition: all 0.5s;
   position: relative;
-
   &--click {
     flex: 0 0 100%;
   }
   &__img {
     margin-right: -22rem;
+    // margin-right: calc(100
+    margin-top: -2rem;
     float: right;
+    overflow: hidden;
+
     &--click {
-      margin-top: -2rem;
+      // margin-top: -2rem;
       margin-right: -5rem;
-      //margin-bottom: -20rem;
       transform: translateY(8rem) scale(1.7);
+    }
+    @media only screen and (max-width: $bp-large) {
+      margin-right: -28rem;
     }
   }
 
@@ -32,25 +33,23 @@
     height: 100vh;
   }
   &__content {
-    // display: flex;
-    // flex-direction: column;
     padding-left: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, minmax(25rem, 35rem));
-    //  grid-template-rows: repeat(3, minmax(25rem, min-content));
+    grid-template-columns: repeat(2, minmax(10rem, 35rem));
 
     grid-row-gap: 0.5rem;
+    @media only screen and (max-width: $bp-medium) {
+      position: absolute;
+      margin-right: 3rem;
+    }
     &__nav {
       grid-column: 1/-1;
-      // make the icon and the image in the same grid cell
       grid-row: 1/2;
-      // margin-bottom: 15rem;
     }
     &__heading {
       margin-top: 15rem;
       grid-column: 1/-1;
       margin-left: 3rem;
-      // make the icon and the image in the same grid cell
       grid-row: 2/3;
       transition: all 0.5s;
       &--click {
@@ -61,9 +60,7 @@
     }
     &__figure {
       grid-column: 1/-1;
-      // make the icon and the image in the same grid cell
       grid-row: 3/4;
-      //overflow: hidden;
       visibility: none;
       opacity: 0;
       margin-left: 3rem;
@@ -93,19 +90,14 @@
         z-index: 222;
         img {
           height: 90%;
-          // width: 70%;
           object-fit: cover;
           display: block;
           transform: translateY(-1rem) translateX(10rem) scale(1.3);
         }
       }
       &--chart {
-        // background-color: #fff;
-        //  height: 25rem;
-        // width: 25rem;
         grid-row: 2/3;
         grid-column: 1/2;
-        // display: none;
         transform: translateY(-100%);
         display: flex;
         padding-bottom: 2rem;
@@ -123,7 +115,6 @@
         opacity: 0;
         visibility: 0;
         transform: translateX(-120%);
-        // transition-delay: 0.5s;
         transition: all 0.5s;
         &--click {
           opacity: 1;
@@ -133,24 +124,29 @@
       }
     }
   }
+  @media only screen and (max-width: $bp-sm-medium) {
+    flex: 0 0 100%;
+  }
 }
 .right {
-  // grid-column: 2;
   flex: 0 0 50%;
-
   position: relative;
-  // background-color: lightcoral;
   background-image: radial-gradient(
     circle at 0%,
-    $color-secondary-light 10%,
-    $color-secondary 40%,
-    $color-secondary-dark 75%
+    #5b988b 10%,
+    #006027 45%,
+    #0f3108 75%
   );
+  // background-image: radial-gradient(
+  //   circle at 0%,
+  //   $color-secondary-light 10%,
+  //   $color-secondary 40%,
+  //   $color-secondary-dark 75%
+  // );
   overflow: hidden;
   transition: all 0.5s;
   &--click {
     flex: 0 0 100%;
-    // order: -1;
     position: relative;
     z-index: 2;
     transform: translateX(-50vw);
@@ -158,46 +154,36 @@
   }
   &__img {
     float: left;
-
-    // width: 20rem;
-    //transform: scale(0.63) translateX(-46rem) translateY(-16rem);
-
     &-green {
       float: left;
-      //left22
-      // height: 62vh;
-      // margin-left: -15rem;
-      // margin-top: 16.5rem;
-      //left66
       height: 82vh;
       margin-left: -17.5rem;
-      margin-top: 10rem;
-      //left11
-      // height: 86vh;
-      // margin-left: -19rem;
-      // margin-top: 8rem;
-      // transition: all 0.5s;
+      margin-top: 8rem;
+      @media only screen and (max-width: $bp-large) {
+        height: 81vh;
+        margin-left: -22rem;
+        margin-top: 11rem;
+      }
 
       &--click {
         height: 100vh;
         transform: translateY(9rem) translateX(20rem) scale(1.33);
-        // transform: translateY(3rem) translateX(15rem) scale(1.4);
-        //margin-left: 5rem;
         margin-top: 3rem;
       }
     }
   }
 
   &__content {
-    // display: flex;
-    // flex-direction: column;
     padding-right: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, minmax(25rem, 40rem));
-    //  grid-template-rows: repeat(3, minmax(25rem, min-content));
+    grid-template-columns: repeat(2, minmax(10rem, 40rem));
     justify-content: end;
 
     grid-row-gap: 0.5rem;
+    @media only screen and (max-width: $bp-medium) {
+      position: absolute;
+      margin-left: 5rem;
+    }
     &__nav {
       grid-column: 1/-1;
       grid-row: 1/2;
@@ -209,7 +195,6 @@
       margin-top: 15rem;
       grid-column: 1/-1;
       margin-right: 3rem;
-      // make the icon and the image in the same grid cell
       grid-row: 2/3;
       transition: all 0.5s;
       &--click {
@@ -221,9 +206,7 @@
     }
     &__figure {
       grid-column: 1/-1;
-      // make the icon and the image in the same grid cell
       grid-row: 3/4;
-      //overflow: hidden;
       visibility: none;
       opacity: 0;
       margin-right: 5rem;
@@ -259,12 +242,8 @@
         }
       }
       &--chart {
-        // background-color: #fff;
-        //  height: 25rem;
-        // width: 25rem;
         grid-row: 2/3;
         grid-column: 1/2;
-        // display: none;
         transform: translateY(-100%);
         display: flex;
         padding-bottom: 2rem;
@@ -282,7 +261,6 @@
         opacity: 0;
         visibility: 0;
         transform: translateX(-120%);
-        // transition-delay: 0.5s;
         transition: all 0.5s;
         &--click {
           opacity: 1;
@@ -292,20 +270,7 @@
       }
     }
   }
+  @media only screen and (max-width: $bp-sm-medium) {
+    flex: 0 0 100%;
+  }
 }
-
-// .title {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   opacity: 0;
-//   visibility: 0;
-//   transform: translateX(-120%);
-//   // transition-delay: 0.5s;
-//   transition: all 0.5s;
-//   &--click {
-//     opacity: 1;
-//     visibility: visible;
-//     transform: none;
-//   }
-// }

@@ -5,6 +5,10 @@
   grid-template-columns: repeat(auto-fit, minmax(10rem, 12rem));
   grid-gap: 2rem;
   // align-items: center;
+  @media only screen and (max-width: $bp-medium) {
+    grid-gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 10rem));
+  }
   margin-left: 2rem;
   &__link:link,
   &__link:visited {
