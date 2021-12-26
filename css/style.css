@@ -50,7 +50,8 @@ body {
   @media only screen and (max-width: 43.75em) {
     .container {
       flex-direction: column;
-      overflow-y: scroll; } }
+      overflow-y: scroll;
+      overflow-x: hidden; } }
 
 .navbar {
   margin-top: 2.5rem;
@@ -88,7 +89,8 @@ body {
   height: 100vh;
   background-image: radial-gradient(circle at 100%, #5213c9 10%, #0c0d55 60%, #000c3d 100%);
   transition: all 0.5s;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .left--click {
     flex: 0 0 100%; }
   .left__img {
