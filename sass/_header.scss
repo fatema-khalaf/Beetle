@@ -1,45 +1,32 @@
 .left {
   flex: 0 0 50%;
   height: 100vh;
-  background-image: radial-gradient(
-    circle at 100%,
-    #5213c9 10%,
-    #0c0d55 60%,
-    #000c3d 100%
-  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/right5.png),
+    radial-gradient(circle at 100%, #5213c9 10%, #0c0d55 60%, #000c3d 100%);
+  background-size: contain;
   transition: all 0.5s;
   position: relative;
   overflow: hidden;
+  background-attachment: fixed;
   &--click {
     flex: 0 0 100%;
-  }
-  &__img {
-    margin-right: -22rem;
-    // margin-right: calc(100
-    margin-top: -2rem;
-    float: right;
-    overflow: hidden;
-
-    &--click {
-      // margin-top: -2rem;
-      margin-right: -5rem;
-      transform: translateY(8rem) scale(1.7);
-    }
-    @media only screen and (max-width: $bp-large) {
-      margin-right: -28rem;
-    }
+    background-position: 110% 20%;
+    background-attachment: unset;
+    background-size: unset;
   }
 
-  img {
-    height: 100vh;
-  }
+  // img {
+  //   height: 100vh;
+  // }
   &__content {
     padding-left: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, minmax(10rem, 35rem));
+    grid-template-columns: repeat(2, minmax(10rem, 35%));
 
     grid-row-gap: 0.5rem;
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: $bp-large) {
       position: absolute;
       margin-right: 3rem;
     }
@@ -68,7 +55,7 @@
 
       display: grid;
       grid-template-columns: repeat(3, min-content);
-      grid-template-rows: repeat(2, 19rem);
+      grid-template-rows: repeat(2, 18rem);
       &--click {
         visibility: visible;
         opacity: 1;
@@ -138,6 +125,12 @@
     #006027 45%,
     #0f3108 75%
   );
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-image: url(../img/left66666.png),
+  //   radial-gradient(circle at 0%, #5b988b 10%, #006027 45%, #0f3108 75%);
+  // background-size: contain;
+  // background-attachment: fixed;
   // background-image: radial-gradient(
   //   circle at 0%,
   //   $color-secondary-light 10%,
@@ -152,26 +145,41 @@
     z-index: 2;
     transform: translateX(-50vw);
     transform-origin: right center;
+    background-attachment: unset;
   }
   &__img {
     float: left;
-    &-green {
-      float: left;
-      height: 82vh;
-      margin-left: -17.5rem;
-      margin-top: 8rem;
-      @media only screen and (max-width: $bp-large) {
-        height: 81vh;
-        margin-left: -22rem;
-        margin-top: 11rem;
-      }
-
-      &--click {
-        height: 100vh;
-        transform: translateY(9rem) translateX(20rem) scale(1.33);
-        margin-top: 3rem;
-      }
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/left66666.png);
+    background-size: contain;
+    background-attachment: fixed;
+    width: 25vh;
+    height: 100vh;
+    &--click {
+      transform: scale(4.5) translateX(3rem);
+      background-attachment: unset;
     }
+    // &-green {
+    //   float: left;
+    //   height: 82vh;
+    //   margin-left: -17.5rem;
+    //   margin-top: 8rem;
+    //   @media only screen and (max-width: $bp-large) {
+    //     height: 81vh;
+    //     margin-left: -22rem;
+    //     margin-top: 11rem;
+    //   }
+
+    //   &--click {
+    //     transform: scale(4.5) translateX(3rem);
+    //     background-attachment: unset;
+
+    //     height: 100vh;
+    //     transform: translateY(9rem) translateX(20rem) scale(1.33);
+    //     margin-top: 3rem;
+    //   }
+    // }
   }
 
   &__content {
@@ -181,7 +189,7 @@
     justify-content: end;
 
     grid-row-gap: 0.5rem;
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: $bp-large) {
       position: absolute;
       margin-left: 5rem;
     }

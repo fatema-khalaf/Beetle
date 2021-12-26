@@ -6,7 +6,7 @@
 
 html {
   font-size: 62.5%; }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 69.25em) {
     html {
       font-size: 50%; } }
 
@@ -18,12 +18,13 @@ body {
   font-family: "Bebas Neue", "cursive", sans-serif; }
 
 .header-2 {
-  font-size: 2.5rem;
-  font-weight: 300;
+  letter-spacing: 1.7px;
+  font-size: 2rem;
+  font-weight: 400;
   font-family: "Josefin Sans", sans-serif; }
 
 .header-1 {
-  font-size: 7rem;
+  font-size: 9rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 400; }
@@ -31,16 +32,25 @@ body {
 .header-3 {
   font-size: 7rem;
   text-transform: uppercase;
-  font-weight: 700; }
+  font-weight: 700;
+  line-height: 0.8;
+  font-family: "Josefin Sans", sans-serif; }
 
 .header-4 {
-  font-size: 5rem;
+  font-size: 4rem;
   text-transform: lowercase;
   font-weight: 700; }
 
 .graph {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  color: #fbf9f9ba;
   font-family: "Nunito", sans-serif; }
+
+.mt {
+  margin-top: 4rem; }
+
+.sf {
+  font-size: 1rem; }
 
 .container {
   height: 100vh;
@@ -87,31 +97,25 @@ body {
 .left {
   flex: 0 0 50%;
   height: 100vh;
-  background-image: radial-gradient(circle at 100%, #5213c9 10%, #0c0d55 60%, #000c3d 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/right5.png), radial-gradient(circle at 100%, #5213c9 10%, #0c0d55 60%, #000c3d 100%);
+  background-size: contain;
   transition: all 0.5s;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  background-attachment: fixed; }
   .left--click {
-    flex: 0 0 100%; }
-  .left__img {
-    margin-right: -22rem;
-    margin-top: -2rem;
-    float: right;
-    overflow: hidden; }
-    .left__img--click {
-      margin-right: -5rem;
-      transform: translateY(8rem) scale(1.7); }
-    @media only screen and (max-width: 62.5em) {
-      .left__img {
-        margin-right: -28rem; } }
-  .left img {
-    height: 100vh; }
+    flex: 0 0 100%;
+    background-position: 110% 20%;
+    background-attachment: unset;
+    background-size: unset; }
   .left__content {
     padding-left: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, minmax(10rem, 35rem));
+    grid-template-columns: repeat(2, minmax(10rem, 35%));
     grid-row-gap: 0.5rem; }
-    @media only screen and (max-width: 50em) {
+    @media only screen and (max-width: 69.25em) {
       .left__content {
         position: absolute;
         margin-right: 3rem; } }
@@ -136,7 +140,7 @@ body {
       margin-left: 3rem;
       display: grid;
       grid-template-columns: repeat(3, min-content);
-      grid-template-rows: repeat(2, 19rem); }
+      grid-template-rows: repeat(2, 18rem); }
       .left__content__figure--click {
         visibility: visible;
         opacity: 1;
@@ -197,30 +201,27 @@ body {
     position: relative;
     z-index: 2;
     transform: translateX(-50vw);
-    transform-origin: right center; }
+    transform-origin: right center;
+    background-attachment: unset; }
   .right__img {
-    float: left; }
-    .right__img-green {
-      float: left;
-      height: 82vh;
-      margin-left: -17.5rem;
-      margin-top: 8rem; }
-      @media only screen and (max-width: 62.5em) {
-        .right__img-green {
-          height: 81vh;
-          margin-left: -22rem;
-          margin-top: 11rem; } }
-      .right__img-green--click {
-        height: 100vh;
-        transform: translateY(9rem) translateX(20rem) scale(1.33);
-        margin-top: 3rem; }
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/left66666.png);
+    background-size: contain;
+    background-attachment: fixed;
+    width: 25vh;
+    height: 100vh; }
+    .right__img--click {
+      transform: scale(4.5) translateX(3rem);
+      background-attachment: unset; }
   .right__content {
     padding-right: 2rem;
     display: grid;
     grid-template-columns: repeat(2, minmax(10rem, 40rem));
     justify-content: end;
     grid-row-gap: 0.5rem; }
-    @media only screen and (max-width: 50em) {
+    @media only screen and (max-width: 69.25em) {
       .right__content {
         position: absolute;
         margin-left: 5rem; } }
@@ -301,7 +302,7 @@ body {
 .btn {
   display: block;
   margin-top: 3rem;
-  padding: 1.5rem 1.5rem;
+  padding: 1rem 1rem;
   border-radius: 2500px;
   border: none;
   background-color: #5709bd;
@@ -311,26 +312,27 @@ body {
   visibility: visible;
   z-index: 2;
   position: relative;
+  margin-bottom: 1rem;
   transition: width 2s; }
   .btn-right {
     border: none;
     transform: translateY(-1px);
     background-color: #0a6955; }
     .btn-right__icon {
-      width: 2rem;
-      height: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
       fill: currentColor;
       display: none;
       transform: rotate(180deg); }
       .btn-right__icon--click {
         display: block; }
   .btn__text {
-    padding: 0 2rem; }
+    padding: 0.5rem 2rem; }
   .btn--click > p {
     display: none; }
   .btn__icon {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     fill: currentColor;
     display: none;
     transform: rotate(180deg); }

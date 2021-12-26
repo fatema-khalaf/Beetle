@@ -23,7 +23,7 @@ var ctx = document.getElementById("myChart"); // node
 
 const right = document.querySelector(".right");
 const iconsRight = document.querySelector(".icons__right");
-const rightImg = document.querySelector(".right__img-green");
+const rightImg = document.querySelector(".right__img");
 const rightHeading = document.querySelector(".right__content__heading");
 const rightFigure = document.querySelector(".right__content__figure");
 const btnrightIcon = document.querySelector(".btn-right__icon");
@@ -91,7 +91,7 @@ btnright.addEventListener("click", (e) => {
   rightFigure.classList.toggle("right__content__figure--click");
   rightfigureContent.classList.toggle("right__content__figure--content--click");
   rightfigureChart.classList.toggle("right__content__figure--chart--click");
-  rightImg.classList.toggle("right__img-green--click");
+  rightImg.classList.toggle("right__img--click");
 });
 fill.forEach((el) => {
   el.style.height = el.innerText;
