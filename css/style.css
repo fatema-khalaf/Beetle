@@ -120,7 +120,6 @@ body {
     height: 100vh; }
     @media only screen and (max-width: 43.75em) {
       .left__img {
-        background-repeat: no-repeat;
         background-position: unset;
         background-size: cover;
         background-attachment: unset;
@@ -137,6 +136,13 @@ body {
       @media only screen and (max-width: 37.5em) {
         .left__img--click {
           width: 32vh; } }
+      @media only screen and (max-width: 30.312em) {
+        .left__img--click {
+          background-position: unset;
+          background-size: cover;
+          background-attachment: unset;
+          width: 32vh;
+          transform: scale(1); } }
   .left__content {
     padding-left: 2rem;
     display: grid;
@@ -181,6 +187,9 @@ body {
         .left__content__figure--content--click {
           transform: translateY(10%);
           opacity: 1; }
+          @media only screen and (max-width: 30.312em) {
+            .left__content__figure--content--click {
+              transform: translateY(90%); } }
       .left__content__figure--image {
         grid-row: 1/-1;
         grid-column: 2 / span 2;
@@ -193,6 +202,9 @@ body {
           @media only screen and (max-width: 50em) {
             .left__content__figure--image img {
               transform: translateY(-1rem) translateX(-9rem) scale(1.3); } }
+          @media only screen and (max-width: 30.312em) {
+            .left__content__figure--image img {
+              transform: translateY(-1rem) translateX(-21rem) scale(1.3); } }
       .left__content__figure--chart {
         grid-row: 2/3;
         grid-column: 1/2;
@@ -204,6 +216,9 @@ body {
         .left__content__figure--chart--click {
           transform: translateY(-10%);
           opacity: 1; }
+          @media only screen and (max-width: 30.312em) {
+            .left__content__figure--chart--click {
+              transform: translateY(80%); } }
       .left__content__figure--title {
         display: flex;
         flex-direction: column;
