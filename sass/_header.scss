@@ -177,18 +177,7 @@
     #006027 45%,
     #0f3108 75%
   );
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-image: url(../img/left66666.png),
-  //   radial-gradient(circle at 0%, #5b988b 10%, #006027 45%, #0f3108 75%);
-  // background-size: contain;
-  // background-attachment: fixed;
-  // background-image: radial-gradient(
-  //   circle at 0%,
-  //   $color-secondary-light 10%,
-  //   $color-secondary 40%,
-  //   $color-secondary-dark 75%
-  // );
+
   overflow: hidden;
   transition: all 0.5s;
   &--click {
@@ -208,42 +197,47 @@
     background-attachment: fixed;
     width: 25vh;
     height: 100vh;
+    @media only screen and (max-width: $bp-sm-medium) {
+      //background-repeat: no-repeat;
+      background-position: right;
+      background-size: cover;
+      background-attachment: unset;
+      width: 32vh;
+    }
     &--click {
       transform: scale(4.5) translateX(3rem);
       background-attachment: unset;
+      @media only screen and (max-width: $bp-sm-medium) {
+        transform: scale(1) translateX(0);
+      }
     }
-    // &-green {
-    //   float: left;
-    //   height: 82vh;
-    //   margin-left: -17.5rem;
-    //   margin-top: 8rem;
-    //   @media only screen and (max-width: $bp-large) {
-    //     height: 81vh;
-    //     margin-left: -22rem;
-    //     margin-top: 11rem;
-    //   }
-
-    //   &--click {
-    //     transform: scale(4.5) translateX(3rem);
-    //     background-attachment: unset;
-
-    //     height: 100vh;
-    //     transform: translateY(9rem) translateX(20rem) scale(1.33);
-    //     margin-top: 3rem;
-    //   }
-    // }
   }
 
   &__content {
     padding-right: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, minmax(10rem, 40rem));
+    grid-template-columns: repeat(2, minmax(18rem, 40rem));
     justify-content: end;
 
     grid-row-gap: 0.5rem;
+    margin-right: 6rem;
     @media only screen and (max-width: $bp-large) {
       position: absolute;
       margin-left: 5rem;
+    }
+    @media only screen and (max-width: $bp-sm-medium) {
+      position: relative;
+    }
+    &--click {
+      position: relative;
+      margin-right: 0rem;
+      @media only screen and (max-width: $bp-sm-medium) {
+        position: absolute;
+        left: 5rem;
+      }
+      @media only screen and (max-width: $bp-sm-medium) {
+        left: unset;
+      }
     }
     &__nav {
       grid-column: 1/-1;
@@ -274,11 +268,11 @@
 
       display: grid;
       grid-template-columns: repeat(3, min-content);
-      grid-template-rows: repeat(2, 19rem);
+      grid-template-rows: repeat(2, 18rem);
       &--click {
         visibility: visible;
         opacity: 1;
-        transition: all 0.9s;
+        transition: all 0.5s;
       }
       &--content {
         grid-row: 1/2;
@@ -289,6 +283,9 @@
         &--click {
           transform: translateY(10%);
           opacity: 1;
+          @media only screen and (max-width: $bp-small) {
+            transform: translateY(100%);
+          }
         }
       }
       &--image {
@@ -300,6 +297,12 @@
           object-fit: cover;
           display: block;
           transform: translateY(-4rem) translateX(-3rem) scale(1.9);
+          @media only screen and (max-width: $bp-sm-medium) {
+            transform: translateY(-2rem) translateX(-11rem) scale(1.9);
+          }
+          @media only screen and (max-width: $bp-small) {
+            transform: translateY(-2rem) translateX(-20rem) scale(1.4);
+          }
         }
       }
       &--chart {
@@ -313,6 +316,9 @@
         &--click {
           transform: translateY(-10%);
           opacity: 1;
+          @media only screen and (max-width: $bp-small) {
+            transform: translateY(80%);
+          }
         }
       }
       &--title {
@@ -323,6 +329,7 @@
         visibility: 0;
         transform: translateX(-120%);
         transition: all 0.5s;
+
         &--click {
           opacity: 1;
           visibility: visible;
@@ -333,5 +340,6 @@
   }
   @media only screen and (max-width: $bp-sm-medium) {
     flex: 0 0 100%;
+    transform: translateX(0);
   }
 }

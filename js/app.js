@@ -28,6 +28,7 @@ const rightHeading = document.querySelector(".right__content__heading");
 const rightFigure = document.querySelector(".right__content__figure");
 const btnrightIcon = document.querySelector(".btn-right__icon");
 const rightTitle = document.querySelector(".right__content__figure--title");
+const rightContent = document.querySelector(".right__content");
 const rightfigureContent = document.querySelector(
   ".right__content__figure--content"
 );
@@ -89,6 +90,7 @@ btnright.addEventListener("click", (e) => {
   rightTitle.classList.toggle("right__content__figure--title--click");
   rightHeading.classList.toggle("right__content__heading--click");
   rightFigure.classList.toggle("right__content__figure--click");
+  rightContent.classList.toggle("right__content--click");
   rightfigureContent.classList.toggle("right__content__figure--content--click");
   rightfigureChart.classList.toggle("right__content__figure--chart--click");
   rightImg.classList.toggle("right__img--click");
